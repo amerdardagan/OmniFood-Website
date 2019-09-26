@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    paddin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif; /*if no lato or arialany from sans serif*/ 
+    font-weight: 300; /*from picked google font-default*/
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+.row {
+    max-width: 1140px; /*only absolute with px I will use, all other relative/resp with percentage*/
+    margin: 0, auto, 0, auto; /*all rows centered t, r, b, l*/
+}
+
+header { /*put a bacground image*/
+    background-image: url(img/hero.jpg), linear-gradient( rgba(26, 14, 14, 0.8), rgba(255,0,0,0));
+      /*since text on bacground is not clear-linear gradientis used*/
+    background-size: cover; /*image is too z0omed out-make it normal*/
+    background-position: center; /*centered position when we adjust page*/
+    height: 100vh /*100% viewport for image*/
+    
+}
+
+h1 {
+    margin: 0; /*because of normalize.css needs to remove white space */
+}
+
+.hero-text-box { /*want to have heading and buttons centered*/
+    position: absolute; /*it doesnt adjust vert and horiz*/
+    width: 1140px; /*absolute width*/
+    top: 50%; /*50% from top*/
+    left: 50%; /*50% from left, but its more into right so..*/
+    transform: translate(-50%, -50%); /*-50% from whole width so its in the center*/
+
+
+
+}
