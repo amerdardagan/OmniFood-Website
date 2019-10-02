@@ -19,7 +19,7 @@ html {
 }
 
 header { /*put a bacground image*/
-    background-image: url(img/hero.jpg), linear-gradient( rgba(26, 14, 14, 0.8), rgba(255,0,0,0));
+    background-image: url(img/hero.jpg);
       /*since text on bacground is not clear-linear gradientis used*/
     background-size: cover; /*image is too z0omed out-make it normal*/
     background-position: center; /*centered position when we adjust page*/
@@ -37,7 +37,4 @@ h1 {
     top: 50%; /*50% from top*/
     left: 50%; /*50% from left, but its more into right so..*/
     transform: translate(-50%, -50%); /*-50% from whole width so its in the center*/
-
-
-
 }
