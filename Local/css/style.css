@@ -18,6 +18,10 @@ html {
     margin: 0, auto, 0, auto; /*all rows centered t, r, b, l*/
 }
 
+section {
+    padding: 80px 0; /*for white space*/
+}
+
 header { /*put a bacground image*/
     background-image: url(img/hero.jpg);
       /*since text on bacground is not clear-linear gradientis used*/
@@ -28,8 +32,14 @@ header { /*put a bacground image*/
 }
 
 h1 {
-    margin: 0; /*because of normalize.css needs to remove white space */
+    margin: 0, 4px; /*because of normalize.css needs to remove white space */
+    color: #fff;
+    font-size: 240%;
+    font-weight: 300; /*for not to be too bold*/
+    letter-spacing: 1px;
+    word-spacing: 4px;
 }
+
 
 .hero-text-box { /*want to have heading and buttons centered*/
     position: absolute; /*it doesnt adjust vert and horiz*/
@@ -37,4 +47,27 @@ h1 {
     top: 50%; /*50% from top*/
     left: 50%; /*50% from left, but its more into right so..*/
     transform: translate(-50%, -50%); /*-50% from whole width so its in the center*/
+}
+
+.btn:link,
+.btn:visited { /*a element in normal state--and visited when btn change after  are the same*/
+    display: inline-block; /*want to make block from inlin element so can have padding*/
+    padding:10px 30px;
+    font-weight: 300;
+    text-decoration: none; /*bez underline*/
+    border-radius: 200px; /*want to btn box be round*/
+}
+
+.btn-full:link,
+.btn-full:visited { /*flatuicolors.com*/
+    background-color: #e67e22;
+    border: 1px solid #e67e22; /*also make border here so both btn box same size*/
+    color: #fff;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #e67e22; /*make 1px orange border*/
+    color: #e67e22;
+
 }
