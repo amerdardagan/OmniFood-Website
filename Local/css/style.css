@@ -23,24 +23,80 @@ html {
 
 .row {
     max-width: 1140px; /*only absolute with px I will use, all other relative/resp with percentage*/
-    margin: 0, auto, 0, auto; /*all rows centered t, r, b, l*/
+    margin: 0 auto 0 auto; /*all rows centered t, r, b, l*/
 }
 
 section {
-    padding: 80px 0; /*for white space*/
+    padding: 80px 0; /*for white space between 1 page and second*/
+}
+
+.box {
+    padding: 1%; /*razmak do između texta i box bordera*/
 }
 
 
 /*---------Headings-------*/
 
+h1, h2, h3 {
+    font-weight: 300;
+    
+}
+
 h1 {
     margin: 0, 4px; /*because of normalize.css needs to remove white space */
     color: #fff;
-    font-size: 240%;
-    font-weight: 300; /*for not to be too bold*/
-    letter-spacing: 1px;
+    font-size: 240%; /*for not to be too bold*/
     word-spacing: 4px;
+    letter-spacing: 1px;
 }
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-size: 110%;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+h2:after { /*želim žutu liniju ispod h2*/
+    display: block;
+    height: 2px;
+    width: 100px;
+    background-color: #e67e22;
+    content: " "; /*uvijek kad imam after:koji content? bez texta pa prazno*/
+    margin: 30px auto; /*želim da linija bude u centru-zato lr auto*/
+}
+
+/*---------Paragraphs--------------*/
+.long-copy {
+    line-height: 145%;
+    margin-left: 15%; 
+    width: 70%;
+    /*da bude centrirano: 15+70+15*/
+}
+
+.box p { /*želim da smanjim font na 90% i da povećam line height*/
+    font-size: 90%;
+    line-height: 145%;
+
+}
+/*------------Icons-----------------*/
+ion-icon { /*icons behave like a FONT*/
+    font-size:300%;
+    display: block;
+    color: #e67e22;
+    margin-bottom: 10px;
+    
+}
+
+
 
 
 /*buttons can have ststes: visited, active, link and hover
@@ -67,7 +123,7 @@ h1 {
 .btn-full:visited { /*flatuicolors.com*/
     background-color: #e67e22;
     border: 1px solid #e67e22; /*also make border here so both btn box same size*/
-    color: #fff;
+    color: #fff; /*color of font*/
     margin-right: 15px;/*want to separate 2 btns-not to be glued together*/
 }
 
@@ -105,7 +161,7 @@ header { /*put a bacground image*/
       /*since text on bacground is not clear-linear gradientis used*/
     background-size: cover; /*image is too z0omed out-make it normal*/
     background-position: center; /*centered position when we adjust page*/
-    height: 100vh /*100% viewport for image*/
+    height: 100vh; /*100% viewport for image*/
     
 }
 
@@ -121,7 +177,6 @@ header { /*put a bacground image*/
     height: 100px;
     width: auto;
     float: left;
-    margin-left: 60px;
     margin-top: 20px;
 }
 
@@ -142,7 +197,7 @@ header { /*put a bacground image*/
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 90%; /*base font is 20px and I wnat 18px so 18/20= 0,9 or 90%*/
+    font-size: 90%; /*base font is 20px and I wnat 18px so 18/20= 0,9 or 90% no pixels*/
     border-bottom: 2px solid transparent;
     transition: border-bottom 0.2s /*tranzicija bordera*/s
 }
