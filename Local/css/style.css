@@ -59,8 +59,9 @@ h2 {
     letter-spacing: 1px;
 }
 
+
 h3 {
-    font-size: 110%;
+    font-size: 100%;
     text-transform: uppercase;
     margin-bottom: 15px;
 }
@@ -83,10 +84,10 @@ h2:after { /*želim žutu liniju ispod h2*/
 }
 
 .box p { /*želim da smanjim font na 90% i da povećam line height*/
-    font-size: 90%;
+    font-size: 110%;
     line-height: 145%;
-
 }
+
 /*------------Icons-----------------*/
 ion-icon { /*icons behave like a FONT*/
     font-size:300%;
@@ -205,4 +206,29 @@ header { /*put a bacground image*/
 .main-nav li a:hover, /*kada kliknem želim da se pojavi orange border bottom*/
 .main-nav li a:active {
     border-bottom: 2px solid #e67e22; /*it first needs to be present above and transparent*/
+}
+
+/*------------------------------------------------*/
+/*           MEALS SECTION                              */
+/*------------------------------------------------*/
+
+.meals-showcase {
+    list-style: none; /*no bulletpoints*/
+    width: 100%;
+}
+
+.meals-showcase li {
+    display: block;
+    float: left; /*da budu jedan uz drugi a ne ispod je rje block*/
+    width: 25% /*jer je puni width 100%, pa 4 slike dodje 25%*/
+}
+
+.meal-photo {
+    width: 100%;
+    margin: 0
+}
+
+.meal-photo img {
+    width: 100%; /*same as container above*/
+    height: auto;
 }
