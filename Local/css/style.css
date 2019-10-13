@@ -4,7 +4,7 @@
 
 * {
     margin: 0;
-    paddin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -209,8 +209,23 @@ header { /*put a bacground image*/
 }
 
 /*------------------------------------------------*/
+/*           FEATURES                             */
+/*------------------------------------------------*/
+
+.section-features .long-copy {
+    margin-bottom: 30px;
+}
+
+
+
+
+/*------------------------------------------------*/
 /*           MEALS SECTION                              */
 /*------------------------------------------------*/
+
+.section-meals {
+    padding: 0; /*da ne bude velik razmak gore sa prethodnom sekcijom*/
+}
 
 .meals-showcase {
     list-style: none; /*no bulletpoints*/
@@ -225,10 +240,42 @@ header { /*put a bacground image*/
 
 .meal-photo {
     width: 100%;
-    margin: 0
+    margin: 0;
+    overflow: hidden;
+    background-color: black;/*jer želim da opacity bude 0.7 ili 70%* od crne boje da posvjetli*/
+
 }
 
 .meal-photo img {
     width: 100%; /*same as container above*/
     height: auto;
+    transform: scale(1.15); /*slika će se povećati za 15%-želim uvećati i zatamniti da bi kasnije smanjio i posvjetlio kod hover*/ 
+                            /*problem: sada slike veće od containera 100% pa overflow:hidden*/
+    opacity: 0.7; /*posvjetliti pozadinu (crnu)*/
+    transition: transform 0.5s, opacity 0.5s;
+}                              
+.meal-photo img:hover {
+    transform: scale(1.03); /*back to normal 1, ali kada zoom out pojavi se mala bijela linija pa zato 1.03*/
+    opacity: 1; /*back to 1 or 100%*/
+}
+
+/*------------------------------------------------*/
+/*           HOW IT WORKS SECTION                             */
+/*------------------------------------------------*/
+.step-box {
+    margin-top: 30px;
+}
+
+.step-box:first-child {
+    padding-right: 3%;
+    text-align: right;
+}
+
+.step-box:last-child {
+    padding-left: 3%; /*u % zbog responsive design-a*/
+}
+
+.app-screen {
+    width: 40%;
+    padding-right: 3%;
 }
