@@ -17,6 +17,18 @@ html {
     text-rendering: optimizeLegibility;
 }
 
+    .clearfix {zoom: 1} /*tu je da  uradi clear float u meals section-stavi u ul*/
+    .clearfix:after {
+        content:'.';
+        clear:both;
+        display:block;
+        height:0;
+        visibility: hidden;
+    }
+
+
+
+
 /*------------------------------------------------*/
 /*           REUSABLE COMPONENTS                  */
 /*------------------------------------------------*/
@@ -262,6 +274,11 @@ header { /*put a bacground image*/
 /*------------------------------------------------*/
 /*           HOW IT WORKS SECTION                             */
 /*------------------------------------------------*/
+
+.section-steps {
+    background-color: #f4f4f4; /*suptilna bijelo-siva pozadina boja da bi razlikovao sekcije*/
+}
+
 .step-box {
     margin-top: 30px;
 }
@@ -277,5 +294,32 @@ header { /*put a bacground image*/
 
 .app-screen {
     width: 40%;
-    padding-right: 3%;
+    float: right;
+    margin-right: 10%;
+}
+
+.work-step {
+    margin-bottom: 54px;
+    margin-top: 60px;
+}
+
+.work-step div {
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    display: inline-block;/*tako da brojevi idu uz border*/
+    width: 55px;
+    height: 55px;
+    border-radius: 50%; /*da bude okruglo*/
+    text-align: center; /*tako da brojevi idu u centar*/
+    padding: 5px;/*rastojanje broja od bordera;*/
+    float: left; /*da text ide uz brojeve*/
+    margin-right: 25px;
+    font-size: 150%; /*povećati brojeve*/
+}
+
+.app-btn img {
+    height:50px;
+    width: auto;
+    margin-right: 10px;
+    margin-top: 30px;
 }
