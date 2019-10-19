@@ -170,13 +170,15 @@ ion-icon { /*icons behave like a FONT*/
 
 
 header { /*put a bacground image*/
-    background-image: url(img/hero.jpg);
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(img/hero.jpg);
       /*since text on bacground is not clear-linear gradientis used*/
+    background-attachment: fixed;/*da se pozadina ne pomjera kada scrollujem*/
     background-size: cover; /*image is too z0omed out-make it normal*/
     background-position: center; /*centered position when we adjust page*/
     height: 100vh; /*100% viewport for image*/
-    
 }
+    
+
 
 .hero-text-box { /*want to have heading and buttons centered*/
     position: absolute; /*it doesnt adjust vert and horiz*/
@@ -323,3 +325,49 @@ header { /*put a bacground image*/
     margin-right: 10px;
     margin-top: 30px;
 }
+
+/*------------------------------------------------*/
+/*           TESTIMONIALS                           */
+/*------------------------------------------------*/
+
+.section-testimonials {
+    background-image:linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(img/back-customers.jpg);
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;/*da se pozadina ne pomjera kada scrollujem*/
+}
+
+blockquote {
+    padding: 2%;
+    line-height: 145%;
+    line-weight: 50%;
+    position: relative;
+    margin-top: 40px;
+}
+
+blockquote:before {
+    content: "\201D"; /*da bi stavio " idi na css tricks glyphs i kopiraj kod*/
+    font-size: 500%;
+    position: absolute;/*želim da quot mark bude kao blok, i pozic gore i lijevo; kad stavljam abolute parent mora biti relative*/
+    top:-5px;
+    left:-5px;
+}
+
+cite {
+    font-size: 90%;
+    margin-top: 25%;
+}
+
+
+cite img {
+    height: 45%;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-right: 4px;
+    vertical-align: middle; /*da imena budu u sredini*/
+}
+
+
+
+
+
