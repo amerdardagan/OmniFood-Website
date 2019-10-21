@@ -367,7 +367,53 @@ cite img {
     vertical-align: middle; /*da imena budu u sredini*/
 }
 
+/*------------------------------------------------*/
+/*           SIGN-UP SECTION                             */
+/*------------------------------------------------*/
 
+.section-plans {
+    background-color: #f4f4f4; /*suptilna bijelo-siva pozadina boja da bi razlikovao sekcije*/
+}
 
+.plan-box {
+    /*make it white bob to be different from grey background*/
+    background-color: #fff;
+    border-radius: 5px; /*da malo zaoblim po rubovima*/
+    width: 90%;/*širina u odnosu na parent (kolona) 100%*/
+    margin-left: 5%;/*od tih 10%, 5% margin lijevo*/
+}
 
+.plan-box div { /*jer imam r div-a unutar plan-box*/
+    padding: 15px; /*svaki od div prema unutra 15px*/
+    border-bottom: 1px solid #f4f4f4e0;/*odvojiti dno svakog diva suptilnom sivim borderom*/
+}
 
+.plan-price {
+    font-size: 250%;/*when using big fonts best to use FONT WEIGHT to make it smaller*/
+    margin-bottom: 10px;
+    color: #e67e22;
+
+}
+
+.plan-price span {
+    font-size: 30%; /*želim da /month bude manji, 30% od parent 300% gore iznad*/
+}
+
+.price-meal {
+    font-size: 80%;/*make it bit smaller*/
+}
+
+.plan-box ul {
+    list-style: none;
+    
+    
+}
+
+.plan-box ul li {
+    padding: 5px 0; /*5px gore/dole 0px lijevo i desno*/ 
+}
+
+.plan-box ul li ion-icon {
+    font-size: 25px;
+    float: left;
+}
