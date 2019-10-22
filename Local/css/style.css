@@ -381,11 +381,21 @@ cite img {
     border-radius: 5px; /*da malo zaoblim po rubovima*/
     width: 90%;/*širina u odnosu na parent (kolona) 100%*/
     margin-left: 5%;/*od tih 10%, 5% margin lijevo*/
+    box-shadow: 0 2px 2px #e3e3e3; /*x osa/yosa/blur/color---ČESTOS E KORISTI U CSS*/
 }
 
 .plan-box div { /*jer imam r div-a unutar plan-box*/
     padding: 15px; /*svaki od div prema unutra 15px*/
     border-bottom: 1px solid #f4f4f4e0;/*odvojiti dno svakog diva suptilnom sivim borderom*/
+}
+
+.plan-box div:first-of-type { /* prvi div--želim da div s cijjenom ima suptilnu  sivu pozadinu*/
+    background-color: rgba(240, 235, 235, 0.473);
+}
+
+.plan-box div:nth-of-type(2) {
+    text-align:center; /* drugi div--centrirati sign up button*/
+    border: none;
 }
 
 .plan-price {
@@ -413,7 +423,4 @@ cite img {
     padding: 5px 0; /*5px gore/dole 0px lijevo i desno*/ 
 }
 
-.plan-box ul li ion-icon {
-    font-size: 25px;
-    float: left;
-}
+
