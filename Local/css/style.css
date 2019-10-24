@@ -122,7 +122,8 @@ ion-icon { /*icons behave like a FONT*/
 /*------------Buttons--------------*/
 
 .btn:link,
-.btn:visited { /*button link and visited will look the same-below*/
+.btn:visited,
+input[type=submit] { /*button link and visited will look the same-below*/
     display: inline-block; /*want to make block from inlin element so can have padding*/
     padding:10px 30px;
     font-weight: 300;
@@ -133,7 +134,8 @@ ion-icon { /*icons behave like a FONT*/
 
 
 .btn-full:link,
-.btn-full:visited { /*flatuicolors.com*/
+.btn-full:visited, 
+input[type=submit] { /*flatuicolors.com*/
     background-color: #e67e22;
     border: 1px solid #e67e22; /*also make border here so both btn box same size*/
     color: #fff; /*color of font*/
@@ -148,19 +150,22 @@ ion-icon { /*icons behave like a FONT*/
 }
 
 .btn:hover,
-.btn.active { /*want:dark orange when clicked 0to255.com*/
+.btn.active,
+input[type=submit]:hover,
+input[type=submit]:active { /*want:dark orange when clicked 0to255.com*/
     background-color: #cf6d17;
 }
 
 /*problem when clicked full btn-color is lighter and ghost btn color is darker so font cant be seen*/
 .btn-full:hover,
-.btn-full:active { 
+.btn-full:active,
+input[type=submit] { 
     border: 1px solid #cf6d17; /*same as back color when clicked*/
 }
 
 .btn-ghost:hover,
 .btn-ghost:active {
-    border: 1px solid #cf6d17;; /*same as back color when clicked*/
+    border: 1px solid #cf6d17; /*same as back color when clicked*/
     color: #fff;/*white color of font when clicked*/
 }
 
@@ -422,5 +427,39 @@ cite img {
 .plan-box ul li {
     padding: 5px 0; /*5px gore/dole 0px lijevo i desno*/ 
 }
+.plan-box ul li span {
+    color: #cf6d17;
+    margin-right: 5px;
+    margin-left: 2px;
+}
 
+/*------------------------------------------------*/
+/*              FORM                           */
+/*------------------------------------------------*/
 
+.contact-form {
+    width: 60%; /*smanjiti n a6*/
+    margin: 0 auto; /*l i d auto-centar; u odnosu na parent element a to je srction*/
+}
+
+input [type=text], /*problem sad i button i check button ide do kraja, tako da samo želino input- text da bude zahvaćen*/
+select,
+textarea {
+    width: 100%; /*da text/opcije/polje popuni čitavu kolonu desno*/
+    padding: 7px; /*staviti manji padding da bi se povećao sadržaj desno*/
+    border-radius: 3px;
+    border: 1px solid #ccc; /*standard*/
+}
+
+textarea { /*povećati box da bude 100% u box desno*/
+    height: 100px;
+}
+
+/*želim da send it button bude full btn kao i iznad, pa
+nađem prvi btn gore i dodam input {type=submit na btn-full:link,*/
+
+input [type=checkbox] {
+    margin: 10px 5px 10px 0; /*želim da malo odvojim newsletter*/
+}
+
+*:focus {outline:none;} /*želim da se ne pojavlije plavo kad selektujem input box*/
