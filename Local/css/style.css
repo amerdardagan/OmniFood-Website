@@ -463,3 +463,59 @@ input [type=checkbox] {
 }
 
 *:focus {outline:none;} /*želim da se ne pojavlije plavo kad selektujem input box*/
+
+/*------------------------------------------------*/
+/*           FOOTER                            */
+/*------------------------------------------------*/
+ footer {
+     background-color: #333333;
+ }
+
+ .footer-nav {
+     list-style: none;
+ }
+
+ .social-links {
+     list-style: none;    
+ }
+
+ .footer-nav li {
+    display: inline-block;
+    float: left;
+    margin-right: 20px;
+ } /*problem zadnji li ne ide do kraja zbog 20px margin zato :last-child*/
+
+ .social-links li {
+     display: inline-block;
+     float: right;
+     margin-right: 20px;
+ }
+
+.social-links li:first-child {
+    margin-right: 0;
+}
+
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    color: #888888;
+    transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #ccc;
+}
+
+.social-links li a ion-icon {
+    color: #888888;
+    height: 40px;
+}
+
+
+
+
+
